@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "start": "pm2 start index.js --name server-health-check",
+    "restart": "npm i && pm2 restart server-health-check",
+    "stop": "pm2 stop server-health-check",
+    "logs": "pm2 logs server-health-check"
   },
   "keywords": [],
   "author": "",
